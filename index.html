@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo list</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/css/bootstraptheme1.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+        <span class="navbartodo">Todo</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarColor01" aria-controls="navbarColor01"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto"></ul>
+
+            <form onsubmit="return false" id="loginform" class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" value="" type="text" placeholder="name">
+                <input class="form-control mr-sm-2" value=""   type="text" placeholder="password">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Login</button>
+            </form>
+
+            <div id="loginusername" style="font-size: 20px" class="form-inline my-2 my-lg-0 displaynone">
+                Welcome
+                <span style="margin: 0 40px 0 10px"></span>
+
+                <button id="userLogout" class="btn btn-secondary my-2 my-sm-0">Logout</button>
+            </div>
+        </div>
+
+
+    </nav>
+
+
+
+    <div class="container">
+
+        <div class="col-md-6  offset-md-3 bs-component">
+            <div class="alert alert-dismissible alert-danger">
+                <!--<button type="button" class="close" data-dismiss="alert">-->
+                    <!--<font style="vertical-align: inherit;">×</font>-->
+                <!--</button>-->
+                <strong>Внимание!</strong>
+                <div id="errormassage">Ошибка на сервере!</div>
+            </div>
+            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">
+                <font style="vertical-align: inherit;">&lt;&gt;</font>
+            </div>
+        </div>
+
+
+
+
+        <div class="col-md-6 offset-md-3">
+            <h3 style="text-align: center; margin: 30px">Todo list</h3>
+
+
+            <div class="loader-container  col-md-1 offset-md-5 displaynone">
+                <div class="loader-1"></div>
+            </div>
+
+
+            <ul class="todo-list list-group list-group-flush"></ul>
+
+            <div style="padding: 10px; margin: 10px; margin-top: 30px">
+                <form   id="addtodo" class="form-inline">
+                    <input style="margin: auto" type="text" size="35%">
+                    <button style="" type="submit" class="btn btn-primary btn-sm"> Add Todo</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="lib/js/jquery-3.3.1.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="db.js"></script>
+    <script src="todo.js"></script>
+    <script src="todolist.js"></script>
+    <script src="controller.js"></script>
+</body>
+</html>
+
+
+
+<!--<li class="todo">-->
+    <!--<div class="linumber">##</div>-->
+    <!--<div class="licheck"><input type="checkbox"></div>-->
+    <!--<div class="liinput"><input type="text"></div>-->
+    <!--<div class="litext">some text</div>-->
+    <!--<button class="btn btn-danger btn-sm btn-button">Delete</button>-->
+    <!--<button class="btn btn-info btn-sm btn-button">Edit</button>-->
+
+<!--</li>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

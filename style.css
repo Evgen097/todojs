@@ -1,0 +1,166 @@
+
+h3{
+    color: red;
+}
+
+.todo-list{
+    /*background-color: #9fcdff;*/
+}
+
+.todo{
+    /*background-color: red;*/
+    /*border: 1px solid green;*/
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.5); /* Параметры тени */
+
+}
+
+.displaynone{
+    display: none;
+}
+
+.decorated{
+    text-decoration: line-through;
+}
+
+
+.licheck{
+    display: inline-block;
+}
+
+.linumber{
+    margin: 0px 20px 0px 10px;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.liinput {
+    margin: 10px 10px 10px 20px;
+}
+.litext{
+    display: inline-block;
+    margin: 0px 0px 0px 20px;
+    font-size: 25px;
+}
+button.deleteTodo, button.editTodo, button.cancelChange, button.saveShange {
+    float: right;
+    margin-right: 10px;
+}
+
+.bs-component{
+    display: none;
+    position: absolute;
+    right: 10px;
+    width: 30%;
+
+}
+
+.navbartodo{
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.loader-container {
+    font-size: 10px;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    text-align: center;
+    border-collapse: collapse;
+    vertical-align: top;
+
+}
+
+.loader-1 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    margin: -25px auto 0;
+    border-radius: 50%;
+    background: #ffffff;
+    background: -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 50%);
+    background: -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 50%);
+    background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 50%);
+    background: -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 50%);
+    background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 50%);
+    position: relative;
+    -webkit-animation: loader-1 1.5s infinite linear;
+    animation: loader-1 1.5s infinite linear;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.loader-1:before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    border-radius: 100% 0 0 0;
+}
+
+.loader-1:after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgb(43, 62, 80);
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@-webkit-keyframes loader-1 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-1 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.displaynone{
+    display: none;
+}
+
+
+
+
+
+
+

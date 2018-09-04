@@ -1,0 +1,19 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "todo.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "json-server": "^0.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "json-server --watch db.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

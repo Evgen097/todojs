@@ -29,13 +29,14 @@ class Todolist{
         db.saveTodo(todo);
     }
 
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////
     draw(){
         this.deleteFromDom();
         this.todos.forEach( (item, i) => item.setIndex(i+1))
         this.todos.forEach(item => item.create())
     }
 
+//////////////////////////////////////////////////////////////////////////////////////
     deleteFromDom(){
         $('.todo').remove();
     }

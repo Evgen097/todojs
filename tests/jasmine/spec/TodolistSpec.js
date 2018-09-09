@@ -22,6 +22,23 @@ describe("Todolist", function() {
 
     });
 
+    it("deleteTodo should  delete todo with ID", function() {
+        todolist.addTodo('some text');
+        var id = todolist.todos[0].id;
+
+        expect( todolist.todos.length ).toBe(1);
+        expect( todolist.todos[0].text ).toBe('some text');
+
+        todolist.deleteTodo(id)
+        expect( todolist.todos.length ).toBe(0);
+
+    });
+    // deleteTodo(id) {
+    //     this.todos = this.todos.filter(item => item.id !== id);
+    //     db.deleteTodo(id);
+    //     this.draw();
+    // }
+
 
 
 

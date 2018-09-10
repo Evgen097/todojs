@@ -4,9 +4,14 @@ var isLogin;
 var todolist;
 var removeLoader;
 
+var port = 3000;
+
+var host = "http://"+window.location.hostname;
+console.log('host: ', host)
+
 
 var db = {
-    domen: "http://localhost:3000/",
+    domen: host + ":" + port + "/",
 
     saveTodo: function(todo){
         var owner = isLogin();

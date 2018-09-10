@@ -123,6 +123,21 @@ var db = {
 
 
 
+    },
+
+    wokupHerokuDB(){
+        $.getJSON( this.domen +"todos" )
+            .done( data => {
+
+            })
+            .fail(( jqxhr, textStatus, error )=> {
+
+            })
+            .always(function() {
+
+            });
+
+
     }
 
 

@@ -1,5 +1,6 @@
 $(document).ready(function(){
 //json-server --watch db.json
+    db.wokupHerokuDB();
 
 
 $('#addtodo').on('submit', event =>{

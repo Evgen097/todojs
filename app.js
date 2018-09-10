@@ -14,6 +14,11 @@ app.get('/', function (req, res) {
     res.send('Something went wrong!');
 });
 
+app.get('/', function (req, res) {
+    res.send('Something went wrong!');
+});
+
+
 
 app.listen(PORT, function () {
     console.log('Example app listening on port 5000!');

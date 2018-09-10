@@ -7,11 +7,14 @@ var removeLoader;
 var port = 3000;
 
 var host = "http://"+window.location.hostname;
-console.log('host: ', host)
+host = "https://gentle-coast-68586.herokuapp.com/";
+// console.log('host: ', host)
 
 
 var db = {
-    domen: host + ":" + port + "/",
+    // domen: host + ":" + port + "/",
+
+    domen: host,
 
     saveTodo: function(todo){
         var owner = isLogin();

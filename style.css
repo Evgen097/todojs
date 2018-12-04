@@ -61,6 +61,21 @@ button.deleteTodo, button.editTodo, button.cancelChange, button.saveShange {
     font-size: 25px;
 }
 
+.btn-primary{
+    position: absolute;
+    right: 30px;
+    /*background-color: red;*/
+    width: 130px;
+    overflow: hidden;
+}
+
+.liinputfield{
+    /*width: 80%;*/
+}
+.todoinput{
+    margin: 20px  10px  20px  -5px;
+    width: 300px;
+}
 
 
 

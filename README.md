@@ -19,3 +19,16 @@ Evgen Kaban
 
 License
 This project is licensed under the MIT License.
+
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/Evgen097/tankgame.git
+git push -u origin master
+
+heroku create todoslistjs
+git push heroku master
+heroku ps:scale web=1
+heroku open
+
+https://murmuring-harbor-64649.herokuapp.com/

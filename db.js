@@ -1,3 +1,4 @@
+"use strict";
 
 var userLogin;
 var isLogin;
@@ -24,7 +25,7 @@ var db = {
                 .done(function (data) {
                 })
                 .fail((jqxhr, textStatus, error) => {
-                    this.errorMessage("Невозможно сохранить Todo")
+                    this.errorMessage("Невозможно сохранить Todo");
                 });
         }
     },
@@ -34,13 +35,13 @@ var db = {
         if(isLogin()){
             var url = this.domen + "todos/"+id;
             $.ajax({
-                type: 'delete',
-                url: url,
+                type: "delete",
+                url: url
             })
                 .done(function( data ) {
                 })
-                .fail(( jqxhr, textStatus, error )=> {
-                    this.errorMessage("Невозможно удалить Todo на сервере")
+                .fail(( jqxhr, textStatus, error ) => {
+                    this.errorMessage("Невозможно удалить Todo на сервере");
                 });
         }
     },
@@ -51,54 +52,54 @@ var db = {
             todo.owner = isLogin();
             var url = this.domen + "todos/" + id;
             $.ajax({
-                type: 'PUT',
+                type: "PUT",
                 url: url,
                 data: todo
             })
                 .done(function (data) {
                 })
                 .fail((jqxhr, textStatus, error) => {
-                    this.errorMessage("Невозможно сохранить изменения")
+                    this.errorMessage("Невозможно сохранить изменения");
                 });
         }
     },
 
-    getTodos(){
+    getTodos: function(){
 
             var owner = isLogin();
             if (owner){
                 $.getJSON( this.domen +"todos" )
-                    .done( data => {
-                        var result = data.filter(item => item.owner === owner)
+                    .done( function(data) {
+                        var result = data.filter((item) => item.owner === owner)
                         todolist.addTodosFromServer(result);
                     })
-                    .fail(( jqxhr, textStatus, error )=> {
-                        this.errorMessage("У вас нет сохраненных Todos")
-                        removeLoader()
+                    .fail( function( jqxhr, textStatus, error ) {
+                        this.errorMessage("У вас нет сохраненных Todos");
+                        removeLoader();
                     })
                     .always(function() {
-                        removeLoader()
+                        removeLoader();
                     });
             }
 
     },
 
-    errorMessage(message=""){
+    errorMessage: function( message = ""){
 
         $('#errormassage').text( 'Ошибка на сервере! ' + message);
         $('.bs-component').css('display', 'block')
 
-         var showEror = setTimeout( ()=>{
+         var showEror = setTimeout( () => {
             $('.bs-component').css('display', 'none');
             $('#errormassage').text('');
-        }, 5000)
+        }, 5000);
 
     },
 
     login(id, password){
 
         $.getJSON( this.domen +"users/" + id )
-            .done( data => {
+            .done( (data) => {
                 if(password === data.password){
                     userLogin(data.id, data.password);
                 }else {
@@ -107,7 +108,7 @@ var db = {
                 }
 
             })
-            .fail(( jqxhr, textStatus, error )=> {
+            .fail(( jqxhr, textStatus, error ) => {
 
                 var obj = {id, password};
 
@@ -115,8 +116,8 @@ var db = {
                     .done(function( data ) {
                         userLogin(id, password);
                     })
-                    .fail(( jqxhr, textStatus, error )=> {
-                        this.errorMessage("Невозможно создать пользователья")
+                    .fail(( jqxhr, textStatus, error ) => {
+                        this.errorMessage("Невозможно создать пользователья");
                     });
             });
 
@@ -141,30 +142,4 @@ var db = {
     }
 
 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};

@@ -80,6 +80,8 @@ userLogin = function(id, hash) {
         todolist.saveNotSaved();
         todolist.getTodosFromServer();
         $(".loader-container").toggleClass('displaynone');
+        localStorage["name"] = id;
+        localStorage["password"] = hash;
 
         return;
     }
@@ -101,6 +103,9 @@ $("body").on("click", "#userLogout", (event)=>{
     parent.find("span").text('');
     $("#loginusername").toggleClass('displaynone');
     $("#loginform").toggleClass('displaynone');
+
+    localStorage["name"] = '';
+    localStorage["password"] = '';
 
     todolist.deleteTodos();
 })
